@@ -525,7 +525,10 @@ def _run_batch(
 
     for row, seed in enumerate(seeds):
         coords_centered = output["coords"][row].detach().cpu().numpy()
-        coords_physical = coords_centered + center
+        coords_physical = (coords_centered + center).astype(np.float64)
+        coords_physical[material["fixed_mask"]] = material["coords_bad"][
+            material["fixed_mask"]
+        ]
         mol_pred = copy_mol_with_coords(material["bad_mol"], coords_physical)
         metrics = evaluate_repair(
             mol_pred=mol_pred,
