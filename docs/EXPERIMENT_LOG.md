@@ -26,3 +26,12 @@
 - 主要限制: 大可编辑区域容易出现键长、键角或 internal clash 失败, 需要在新 plan 中验证几何保持方法.
 - 报告: [20260723-01-oracle-mask-repair-pilot-report.md](report/20260723-01-oracle-mask-repair-pilot-report.md).
 - 输出: `outputs/20260723-01-oracle-mask-repair-pilot/`.
+
+## 2026-07-23: Official fragment inpainting control 开始
+
+- `experiment_id`: `20260723-02-official-fragment-inpainting-control`.
+- plan: [20260723-02-official-fragment-inpainting-control-plan.md](plan/20260723-02-official-fragment-inpainting-control-plan.md).
+- 目的: 在完全相同的 5 个人工 clash 案例、真值 `M_fixed` 和 50 个 seed 上运行 FLOWR.ROOT 官方 fragment inpainting, 公平对照上一轮 coordinate-only 修复.
+- 主要终点: 同时报告允许可编辑区换分子的 native local redesign success, 以及要求完整分子身份和立体化学不变的 strict same-molecule repair success.
+- 当前进度: 协议已冻结, experiment/output 骨架已建立, 即将实现共同评估和官方 mask 适配器.
+- 输出位置: `outputs/20260723-02-official-fragment-inpainting-control/`.

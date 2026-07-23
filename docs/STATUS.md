@@ -5,11 +5,10 @@
 ## 当前阶段
 
 - 首个 oracle-mask repair pilot 已完成, 冻结 gate 结论为 `CONDITIONAL`.
-- 当前计划: [20260723-01-oracle-mask-repair-pilot-plan.md](plan/20260723-01-oracle-mask-repair-pilot-plan.md).
+- 当前计划: [20260723-02-official-fragment-inpainting-control-plan.md](plan/20260723-02-official-fragment-inpainting-control-plan.md).
 - 上位设计: [20260722-01-flowr-root-ligand-repair-v1-plan.md](plan/20260722-01-flowr-root-ligand-repair-v1-plan.md).
-- 首版范围: 诊断蛋白质-配体 clash, 定位需要移动的配体原子, 并使用 FLOWR.ROOT 进行 coordinate-only 局部修复.
-- 正式实验 50/50 正常完成, 14/50 成功. 固定坐标和离散图保持 50/50, 主要瓶颈是可编辑区域的内部几何.
-- 实验报告: [20260723-01-oracle-mask-repair-pilot-report.md](report/20260723-01-oracle-mask-repair-pilot-report.md).
+- 当前工作: 在同一批人工 clash 输入和 seed 上执行 FLOWR.ROOT 官方 fragment inpainting, 与已冻结的 coordinate-only 结果做公平对照.
+- 对照同时报告局部重设计成功和严格同分子修复成功, 避免把生成的新分子误计为原分子的坐标修复.
 
 ## 已确认边界
 
@@ -21,6 +20,6 @@
 
 ## 下一步
 
-1. 新建独立 plan, 在 oracle mask 条件下验证能够保持局部共价几何的修复表示或约束.
-2. 保留本轮冻结协议作为对照, 不在已完成实验内调参.
-3. Oracle 修复达到 GO 标准后, 再进入 Fixed Mask Head 训练.
+1. 完成共同评估器和真值 fragment mask 适配器.
+2. 通过旧结果复现检查与 GPU smoke 后运行 50 次官方采样.
+3. 根据 native/strict 双终点判断官方方法适合作为局部重设计还是同分子修复基线.
