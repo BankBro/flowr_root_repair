@@ -1,13 +1,14 @@
 # 项目状态
 
-**更新时间:** 2026-07-22
+**更新时间:** 2026-07-23
 
 ## 当前阶段
 
-- 首版修复方案已经完成设计整理, 尚未开始代码实现或正式实验.
-- 当前计划: [20260722-01-flowr-root-ligand-repair-v1-plan.md](plan/20260722-01-flowr-root-ligand-repair-v1-plan.md).
+- 首版修复方案已经完成设计整理, 当前进入首个 oracle-mask repair pilot.
+- 当前计划: [20260723-01-oracle-mask-repair-pilot-plan.md](plan/20260723-01-oracle-mask-repair-pilot-plan.md).
+- 上位设计: [20260722-01-flowr-root-ligand-repair-v1-plan.md](plan/20260722-01-flowr-root-ligand-repair-v1-plan.md).
 - 首版范围: 诊断蛋白质-配体 clash, 定位需要移动的配体原子, 并使用 FLOWR.ROOT 进行 coordinate-only 局部修复.
-- 仓库协作规则和顶层实验框架已经建立. 当前没有具体的 experiment 或 output 子目录.
+- 已创建 `20260723-01-oracle-mask-repair-pilot` 的 experiment 和 output 骨架, 正在实现 coordinate-only oracle 修复路径.
 
 ## 已确认边界
 
@@ -19,6 +20,6 @@
 
 ## 下一步
 
-1. 单独确认项目运行环境和依赖可用性.
-2. 准备开始实验时, 创建与当前计划对应的 experiment 和 output 目录.
-3. 先进行轻量数据检查和 oracle-mask smoke test, 通过后再进入正式实验.
+1. 实现并测试可复用的 coordinate-only oracle 修复内核.
+2. 完成 CPU preflight 与 5 步、100 步 GPU smoke.
+3. 运行冻结的 5 个样本 x 10 个 seed 正式实验并形成 report.
