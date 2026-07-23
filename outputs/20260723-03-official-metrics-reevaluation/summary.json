@@ -1,0 +1,1648 @@
+{
+  "baselines": {
+    "g_bad": {
+      "attempts": 5,
+      "condition_match": {
+        "count": 5,
+        "evaluable": 5,
+        "rate_of_attempts": 1.0,
+        "rate_of_evaluable": 1.0
+      },
+      "conditioned_pb_valid": {
+        "count": 0,
+        "rate": 0.0
+      },
+      "fully_connected_valid": {
+        "count": 5,
+        "rate": 1.0
+      },
+      "pb_subtests": {
+        "all_atoms_connected": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "aromatic_ring_flatness": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "bond_angles": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "bond_lengths": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "double_bond_flatness": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "inchi_convertible": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "internal_energy": {
+          "count": 4,
+          "rate": 0.8
+        },
+        "internal_steric_clash": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "minimum_distance_to_inorganic_cofactors": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "minimum_distance_to_organic_cofactors": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "minimum_distance_to_protein": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "minimum_distance_to_waters": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "mol_cond_loaded": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "mol_pred_loaded": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "protein-ligand_maximum_distance": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "sanitization": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "volume_overlap_with_inorganic_cofactors": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "volume_overlap_with_organic_cofactors": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "volume_overlap_with_protein": {
+          "count": 4,
+          "rate": 0.8
+        },
+        "volume_overlap_with_waters": {
+          "count": 5,
+          "rate": 1.0
+        }
+      },
+      "pb_valid": {
+        "count": 0,
+        "rate": 0.0
+      },
+      "strain_energy_kcal_mol": {
+        "evaluable": 5,
+        "mean": 88.20588937572484,
+        "median": 50.78549201446094,
+        "q1": 24.146081900305287,
+        "q3": 136.53593294241614,
+        "std": 79.97567366177681
+      },
+      "valid": {
+        "count": 5,
+        "rate": 1.0
+      }
+    },
+    "g_good": {
+      "attempts": 5,
+      "condition_match": {
+        "count": 5,
+        "evaluable": 5,
+        "rate_of_attempts": 1.0,
+        "rate_of_evaluable": 1.0
+      },
+      "conditioned_pb_valid": {
+        "count": 5,
+        "rate": 1.0
+      },
+      "fully_connected_valid": {
+        "count": 5,
+        "rate": 1.0
+      },
+      "pb_subtests": {
+        "all_atoms_connected": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "aromatic_ring_flatness": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "bond_angles": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "bond_lengths": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "double_bond_flatness": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "inchi_convertible": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "internal_energy": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "internal_steric_clash": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "minimum_distance_to_inorganic_cofactors": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "minimum_distance_to_organic_cofactors": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "minimum_distance_to_protein": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "minimum_distance_to_waters": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "mol_cond_loaded": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "mol_pred_loaded": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "protein-ligand_maximum_distance": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "sanitization": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "volume_overlap_with_inorganic_cofactors": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "volume_overlap_with_organic_cofactors": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "volume_overlap_with_protein": {
+          "count": 5,
+          "rate": 1.0
+        },
+        "volume_overlap_with_waters": {
+          "count": 5,
+          "rate": 1.0
+        }
+      },
+      "pb_valid": {
+        "count": 5,
+        "rate": 1.0
+      },
+      "strain_energy_kcal_mol": {
+        "evaluable": 5,
+        "mean": 33.981086469406776,
+        "median": 40.36744689045722,
+        "q1": 21.671755013681434,
+        "q3": 49.29358727532404,
+        "std": 16.54758484505037
+      },
+      "valid": {
+        "count": 5,
+        "rate": 1.0
+      }
+    }
+  },
+  "experiment_id": "20260723-03-official-metrics-reevaluation",
+  "methods": {
+    "coordinate_only": {
+      "attempts": 50,
+      "condition_match": {
+        "count": 50,
+        "evaluable": 50,
+        "rate_of_attempts": 1.0,
+        "rate_of_evaluable": 1.0
+      },
+      "conditioned_pb_valid": {
+        "count": 14,
+        "rate": 0.28
+      },
+      "fully_connected_valid": {
+        "count": 50,
+        "rate": 1.0
+      },
+      "pb_subtests": {
+        "all_atoms_connected": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "aromatic_ring_flatness": {
+          "count": 42,
+          "rate": 0.84
+        },
+        "bond_angles": {
+          "count": 21,
+          "rate": 0.42
+        },
+        "bond_lengths": {
+          "count": 21,
+          "rate": 0.42
+        },
+        "double_bond_flatness": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "inchi_convertible": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "internal_energy": {
+          "count": 21,
+          "rate": 0.42
+        },
+        "internal_steric_clash": {
+          "count": 24,
+          "rate": 0.48
+        },
+        "minimum_distance_to_inorganic_cofactors": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "minimum_distance_to_organic_cofactors": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "minimum_distance_to_protein": {
+          "count": 40,
+          "rate": 0.8
+        },
+        "minimum_distance_to_waters": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "mol_cond_loaded": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "mol_pred_loaded": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "protein-ligand_maximum_distance": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "sanitization": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "volume_overlap_with_inorganic_cofactors": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "volume_overlap_with_organic_cofactors": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "volume_overlap_with_protein": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "volume_overlap_with_waters": {
+          "count": 50,
+          "rate": 1.0
+        }
+      },
+      "pb_valid": {
+        "count": 14,
+        "rate": 0.28
+      },
+      "per_case": {
+        "3rog__1__1.A__1.B": {
+          "attempts": 10,
+          "condition_match": {
+            "count": 10,
+            "evaluable": 10,
+            "rate_of_attempts": 1.0,
+            "rate_of_evaluable": 1.0
+          },
+          "conditioned_pb_valid": {
+            "count": 3,
+            "rate": 0.3
+          },
+          "fully_connected_valid": {
+            "count": 10,
+            "rate": 1.0
+          },
+          "pb_subtests": {
+            "all_atoms_connected": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "aromatic_ring_flatness": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "bond_angles": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "bond_lengths": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "double_bond_flatness": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "inchi_convertible": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "internal_energy": {
+              "count": 9,
+              "rate": 0.9
+            },
+            "internal_steric_clash": {
+              "count": 9,
+              "rate": 0.9
+            },
+            "minimum_distance_to_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_organic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_protein": {
+              "count": 3,
+              "rate": 0.3
+            },
+            "minimum_distance_to_waters": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "mol_cond_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "mol_pred_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "protein-ligand_maximum_distance": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "sanitization": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_organic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_protein": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_waters": {
+              "count": 10,
+              "rate": 1.0
+            }
+          },
+          "pb_valid": {
+            "count": 3,
+            "rate": 0.3
+          },
+          "strain_energy_kcal_mol": {
+            "evaluable": 10,
+            "mean": 470.6527496546475,
+            "median": 70.40934012326397,
+            "q1": 66.83852977281671,
+            "q3": 75.67496578182033,
+            "std": 1200.9265341444664
+          },
+          "valid": {
+            "count": 10,
+            "rate": 1.0
+          }
+        },
+        "4bv5__2__1.B__1.D": {
+          "attempts": 10,
+          "condition_match": {
+            "count": 10,
+            "evaluable": 10,
+            "rate_of_attempts": 1.0,
+            "rate_of_evaluable": 1.0
+          },
+          "conditioned_pb_valid": {
+            "count": 0,
+            "rate": 0.0
+          },
+          "fully_connected_valid": {
+            "count": 10,
+            "rate": 1.0
+          },
+          "pb_subtests": {
+            "all_atoms_connected": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "aromatic_ring_flatness": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "bond_angles": {
+              "count": 0,
+              "rate": 0.0
+            },
+            "bond_lengths": {
+              "count": 0,
+              "rate": 0.0
+            },
+            "double_bond_flatness": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "inchi_convertible": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "internal_energy": {
+              "count": 0,
+              "rate": 0.0
+            },
+            "internal_steric_clash": {
+              "count": 0,
+              "rate": 0.0
+            },
+            "minimum_distance_to_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_organic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_protein": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_waters": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "mol_cond_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "mol_pred_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "protein-ligand_maximum_distance": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "sanitization": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_organic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_protein": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_waters": {
+              "count": 10,
+              "rate": 1.0
+            }
+          },
+          "pb_valid": {
+            "count": 0,
+            "rate": 0.0
+          },
+          "strain_energy_kcal_mol": {
+            "evaluable": 10,
+            "mean": 26357.4254678672,
+            "median": 21245.891827534135,
+            "q1": 18501.374783163737,
+            "q3": 37201.087894199845,
+            "std": 15465.221803699918
+          },
+          "valid": {
+            "count": 10,
+            "rate": 1.0
+          }
+        },
+        "4f0s__1__1.A__1.B": {
+          "attempts": 10,
+          "condition_match": {
+            "count": 10,
+            "evaluable": 10,
+            "rate_of_attempts": 1.0,
+            "rate_of_evaluable": 1.0
+          },
+          "conditioned_pb_valid": {
+            "count": 1,
+            "rate": 0.1
+          },
+          "fully_connected_valid": {
+            "count": 10,
+            "rate": 1.0
+          },
+          "pb_subtests": {
+            "all_atoms_connected": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "aromatic_ring_flatness": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "bond_angles": {
+              "count": 1,
+              "rate": 0.1
+            },
+            "bond_lengths": {
+              "count": 1,
+              "rate": 0.1
+            },
+            "double_bond_flatness": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "inchi_convertible": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "internal_energy": {
+              "count": 1,
+              "rate": 0.1
+            },
+            "internal_steric_clash": {
+              "count": 2,
+              "rate": 0.2
+            },
+            "minimum_distance_to_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_organic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_protein": {
+              "count": 7,
+              "rate": 0.7
+            },
+            "minimum_distance_to_waters": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "mol_cond_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "mol_pred_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "protein-ligand_maximum_distance": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "sanitization": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_organic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_protein": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_waters": {
+              "count": 10,
+              "rate": 1.0
+            }
+          },
+          "pb_valid": {
+            "count": 1,
+            "rate": 0.1
+          },
+          "strain_energy_kcal_mol": {
+            "evaluable": 10,
+            "mean": 44614.82024131492,
+            "median": 20035.29747560098,
+            "q1": 8725.632828454278,
+            "q3": 39845.27901364173,
+            "std": 57589.08726841566
+          },
+          "valid": {
+            "count": 10,
+            "rate": 1.0
+          }
+        },
+        "6pvz__1__1.A__1.C": {
+          "attempts": 10,
+          "condition_match": {
+            "count": 10,
+            "evaluable": 10,
+            "rate_of_attempts": 1.0,
+            "rate_of_evaluable": 1.0
+          },
+          "conditioned_pb_valid": {
+            "count": 10,
+            "rate": 1.0
+          },
+          "fully_connected_valid": {
+            "count": 10,
+            "rate": 1.0
+          },
+          "pb_subtests": {
+            "all_atoms_connected": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "aromatic_ring_flatness": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "bond_angles": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "bond_lengths": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "double_bond_flatness": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "inchi_convertible": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "internal_energy": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "internal_steric_clash": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_organic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_protein": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_waters": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "mol_cond_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "mol_pred_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "protein-ligand_maximum_distance": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "sanitization": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_organic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_protein": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_waters": {
+              "count": 10,
+              "rate": 1.0
+            }
+          },
+          "pb_valid": {
+            "count": 10,
+            "rate": 1.0
+          },
+          "strain_energy_kcal_mol": {
+            "evaluable": 10,
+            "mean": 10.619586187406245,
+            "median": 10.525820947439001,
+            "q1": 10.385534717018047,
+            "q3": 10.75339725720001,
+            "std": 0.5559415284040051
+          },
+          "valid": {
+            "count": 10,
+            "rate": 1.0
+          }
+        },
+        "7ddl__1__1.A__1.T": {
+          "attempts": 10,
+          "condition_match": {
+            "count": 10,
+            "evaluable": 10,
+            "rate_of_attempts": 1.0,
+            "rate_of_evaluable": 1.0
+          },
+          "conditioned_pb_valid": {
+            "count": 0,
+            "rate": 0.0
+          },
+          "fully_connected_valid": {
+            "count": 10,
+            "rate": 1.0
+          },
+          "pb_subtests": {
+            "all_atoms_connected": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "aromatic_ring_flatness": {
+              "count": 2,
+              "rate": 0.2
+            },
+            "bond_angles": {
+              "count": 0,
+              "rate": 0.0
+            },
+            "bond_lengths": {
+              "count": 0,
+              "rate": 0.0
+            },
+            "double_bond_flatness": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "inchi_convertible": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "internal_energy": {
+              "count": 1,
+              "rate": 0.1
+            },
+            "internal_steric_clash": {
+              "count": 3,
+              "rate": 0.3
+            },
+            "minimum_distance_to_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_organic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_protein": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_waters": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "mol_cond_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "mol_pred_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "protein-ligand_maximum_distance": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "sanitization": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_organic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_protein": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_waters": {
+              "count": 10,
+              "rate": 1.0
+            }
+          },
+          "pb_valid": {
+            "count": 0,
+            "rate": 0.0
+          },
+          "strain_energy_kcal_mol": {
+            "evaluable": 10,
+            "mean": 72245.8454515513,
+            "median": 79026.40719403443,
+            "q1": 42909.319603395925,
+            "q3": 105763.09344873435,
+            "std": 40491.72865852981
+          },
+          "valid": {
+            "count": 10,
+            "rate": 1.0
+          }
+        }
+      },
+      "strain_energy_kcal_mol": {
+        "evaluable": 50,
+        "mean": 28739.872699315096,
+        "median": 7486.804536398415,
+        "q1": 66.83852977281671,
+        "q3": 40461.1352893633,
+        "std": 42359.59592074258
+      },
+      "valid": {
+        "count": 50,
+        "rate": 1.0
+      }
+    },
+    "official_inpainting": {
+      "attempts": 50,
+      "condition_match": {
+        "count": 49,
+        "evaluable": 49,
+        "rate_of_attempts": 0.98,
+        "rate_of_evaluable": 1.0
+      },
+      "conditioned_pb_valid": {
+        "count": 24,
+        "rate": 0.48
+      },
+      "fully_connected_valid": {
+        "count": 49,
+        "rate": 0.98
+      },
+      "pb_subtests": {
+        "all_atoms_connected": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "aromatic_ring_flatness": {
+          "count": 49,
+          "rate": 0.98
+        },
+        "bond_angles": {
+          "count": 34,
+          "rate": 0.68
+        },
+        "bond_lengths": {
+          "count": 38,
+          "rate": 0.76
+        },
+        "double_bond_flatness": {
+          "count": 49,
+          "rate": 0.98
+        },
+        "inchi_convertible": {
+          "count": 49,
+          "rate": 0.98
+        },
+        "internal_energy": {
+          "count": 45,
+          "rate": 0.9
+        },
+        "internal_steric_clash": {
+          "count": 49,
+          "rate": 0.98
+        },
+        "minimum_distance_to_inorganic_cofactors": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "minimum_distance_to_organic_cofactors": {
+          "count": 47,
+          "rate": 0.94
+        },
+        "minimum_distance_to_protein": {
+          "count": 47,
+          "rate": 0.94
+        },
+        "minimum_distance_to_waters": {
+          "count": 47,
+          "rate": 0.94
+        },
+        "mol_cond_loaded": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "mol_pred_loaded": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "protein-ligand_maximum_distance": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "sanitization": {
+          "count": 49,
+          "rate": 0.98
+        },
+        "volume_overlap_with_inorganic_cofactors": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "volume_overlap_with_organic_cofactors": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "volume_overlap_with_protein": {
+          "count": 50,
+          "rate": 1.0
+        },
+        "volume_overlap_with_waters": {
+          "count": 50,
+          "rate": 1.0
+        }
+      },
+      "pb_valid": {
+        "count": 24,
+        "rate": 0.48
+      },
+      "per_case": {
+        "3rog__1__1.A__1.B": {
+          "attempts": 10,
+          "condition_match": {
+            "count": 10,
+            "evaluable": 10,
+            "rate_of_attempts": 1.0,
+            "rate_of_evaluable": 1.0
+          },
+          "conditioned_pb_valid": {
+            "count": 2,
+            "rate": 0.2
+          },
+          "fully_connected_valid": {
+            "count": 10,
+            "rate": 1.0
+          },
+          "pb_subtests": {
+            "all_atoms_connected": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "aromatic_ring_flatness": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "bond_angles": {
+              "count": 2,
+              "rate": 0.2
+            },
+            "bond_lengths": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "double_bond_flatness": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "inchi_convertible": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "internal_energy": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "internal_steric_clash": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_organic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_protein": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_waters": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "mol_cond_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "mol_pred_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "protein-ligand_maximum_distance": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "sanitization": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_organic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_protein": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_waters": {
+              "count": 10,
+              "rate": 1.0
+            }
+          },
+          "pb_valid": {
+            "count": 2,
+            "rate": 0.2
+          },
+          "strain_energy_kcal_mol": {
+            "evaluable": 10,
+            "mean": 165.28923667336485,
+            "median": 165.65448171142017,
+            "q1": 157.9986690605324,
+            "q3": 182.67598462091237,
+            "std": 25.994716872583833
+          },
+          "valid": {
+            "count": 10,
+            "rate": 1.0
+          }
+        },
+        "4bv5__2__1.B__1.D": {
+          "attempts": 10,
+          "condition_match": {
+            "count": 10,
+            "evaluable": 10,
+            "rate_of_attempts": 1.0,
+            "rate_of_evaluable": 1.0
+          },
+          "conditioned_pb_valid": {
+            "count": 7,
+            "rate": 0.7
+          },
+          "fully_connected_valid": {
+            "count": 10,
+            "rate": 1.0
+          },
+          "pb_subtests": {
+            "all_atoms_connected": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "aromatic_ring_flatness": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "bond_angles": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "bond_lengths": {
+              "count": 9,
+              "rate": 0.9
+            },
+            "double_bond_flatness": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "inchi_convertible": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "internal_energy": {
+              "count": 8,
+              "rate": 0.8
+            },
+            "internal_steric_clash": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_organic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_protein": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_waters": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "mol_cond_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "mol_pred_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "protein-ligand_maximum_distance": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "sanitization": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_organic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_protein": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_waters": {
+              "count": 10,
+              "rate": 1.0
+            }
+          },
+          "pb_valid": {
+            "count": 7,
+            "rate": 0.7
+          },
+          "strain_energy_kcal_mol": {
+            "evaluable": 10,
+            "mean": 318.9538066916257,
+            "median": 131.31329133119044,
+            "q1": 125.37538422424318,
+            "q3": 319.74650342132816,
+            "std": 446.25999471475836
+          },
+          "valid": {
+            "count": 10,
+            "rate": 1.0
+          }
+        },
+        "4f0s__1__1.A__1.B": {
+          "attempts": 10,
+          "condition_match": {
+            "count": 9,
+            "evaluable": 9,
+            "rate_of_attempts": 0.9,
+            "rate_of_evaluable": 1.0
+          },
+          "conditioned_pb_valid": {
+            "count": 2,
+            "rate": 0.2
+          },
+          "fully_connected_valid": {
+            "count": 9,
+            "rate": 0.9
+          },
+          "pb_subtests": {
+            "all_atoms_connected": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "aromatic_ring_flatness": {
+              "count": 9,
+              "rate": 0.9
+            },
+            "bond_angles": {
+              "count": 5,
+              "rate": 0.5
+            },
+            "bond_lengths": {
+              "count": 2,
+              "rate": 0.2
+            },
+            "double_bond_flatness": {
+              "count": 9,
+              "rate": 0.9
+            },
+            "inchi_convertible": {
+              "count": 9,
+              "rate": 0.9
+            },
+            "internal_energy": {
+              "count": 9,
+              "rate": 0.9
+            },
+            "internal_steric_clash": {
+              "count": 9,
+              "rate": 0.9
+            },
+            "minimum_distance_to_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_organic_cofactors": {
+              "count": 7,
+              "rate": 0.7
+            },
+            "minimum_distance_to_protein": {
+              "count": 7,
+              "rate": 0.7
+            },
+            "minimum_distance_to_waters": {
+              "count": 7,
+              "rate": 0.7
+            },
+            "mol_cond_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "mol_pred_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "protein-ligand_maximum_distance": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "sanitization": {
+              "count": 9,
+              "rate": 0.9
+            },
+            "volume_overlap_with_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_organic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_protein": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_waters": {
+              "count": 10,
+              "rate": 1.0
+            }
+          },
+          "pb_valid": {
+            "count": 2,
+            "rate": 0.2
+          },
+          "strain_energy_kcal_mol": {
+            "evaluable": 9,
+            "mean": 188.682789776981,
+            "median": 148.8375608013042,
+            "q1": 129.28938919349105,
+            "q3": 183.28138565240397,
+            "std": 92.9978762556472
+          },
+          "valid": {
+            "count": 9,
+            "rate": 0.9
+          }
+        },
+        "6pvz__1__1.A__1.C": {
+          "attempts": 10,
+          "condition_match": {
+            "count": 10,
+            "evaluable": 10,
+            "rate_of_attempts": 1.0,
+            "rate_of_evaluable": 1.0
+          },
+          "conditioned_pb_valid": {
+            "count": 7,
+            "rate": 0.7
+          },
+          "fully_connected_valid": {
+            "count": 10,
+            "rate": 1.0
+          },
+          "pb_subtests": {
+            "all_atoms_connected": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "aromatic_ring_flatness": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "bond_angles": {
+              "count": 7,
+              "rate": 0.7
+            },
+            "bond_lengths": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "double_bond_flatness": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "inchi_convertible": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "internal_energy": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "internal_steric_clash": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_organic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_protein": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_waters": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "mol_cond_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "mol_pred_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "protein-ligand_maximum_distance": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "sanitization": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_organic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_protein": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_waters": {
+              "count": 10,
+              "rate": 1.0
+            }
+          },
+          "pb_valid": {
+            "count": 7,
+            "rate": 0.7
+          },
+          "strain_energy_kcal_mol": {
+            "evaluable": 10,
+            "mean": 69.59453312292611,
+            "median": 61.77941832302703,
+            "q1": 44.19958317600999,
+            "q3": 92.80853751735485,
+            "std": 33.74527728966411
+          },
+          "valid": {
+            "count": 10,
+            "rate": 1.0
+          }
+        },
+        "7ddl__1__1.A__1.T": {
+          "attempts": 10,
+          "condition_match": {
+            "count": 10,
+            "evaluable": 10,
+            "rate_of_attempts": 1.0,
+            "rate_of_evaluable": 1.0
+          },
+          "conditioned_pb_valid": {
+            "count": 6,
+            "rate": 0.6
+          },
+          "fully_connected_valid": {
+            "count": 10,
+            "rate": 1.0
+          },
+          "pb_subtests": {
+            "all_atoms_connected": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "aromatic_ring_flatness": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "bond_angles": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "bond_lengths": {
+              "count": 7,
+              "rate": 0.7
+            },
+            "double_bond_flatness": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "inchi_convertible": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "internal_energy": {
+              "count": 8,
+              "rate": 0.8
+            },
+            "internal_steric_clash": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_organic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_protein": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "minimum_distance_to_waters": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "mol_cond_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "mol_pred_loaded": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "protein-ligand_maximum_distance": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "sanitization": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_inorganic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_organic_cofactors": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_protein": {
+              "count": 10,
+              "rate": 1.0
+            },
+            "volume_overlap_with_waters": {
+              "count": 10,
+              "rate": 1.0
+            }
+          },
+          "pb_valid": {
+            "count": 6,
+            "rate": 0.6
+          },
+          "strain_energy_kcal_mol": {
+            "evaluable": 10,
+            "mean": 304.27388943946687,
+            "median": 184.23734052294606,
+            "q1": 144.45737579844732,
+            "q3": 265.69971155960036,
+            "std": 275.4961337865537
+          },
+          "valid": {
+            "count": 10,
+            "rate": 1.0
+          }
+        }
+      },
+      "strain_energy_kcal_mol": {
+        "evaluable": 49,
+        "mean": 209.7808115768707,
+        "median": 145.80175868615487,
+        "q1": 113.16211921011472,
+        "q3": 190.97277773825695,
+        "std": 258.5376092918798
+      },
+      "valid": {
+        "count": 49,
+        "rate": 0.98
+      }
+    }
+  },
+  "paired": {
+    "conditioned_pb_valid": {
+      "both_fail": 19,
+      "both_pass": 7,
+      "coordinate_only_pass": 7,
+      "official_inpainting_pass": 17
+    },
+    "pb_valid": {
+      "both_fail": 19,
+      "both_pass": 7,
+      "coordinate_only_pass": 7,
+      "official_inpainting_pass": 17
+    }
+  },
+  "protocol": {
+    "attempts_per_method": 50,
+    "condition_mode": "substructure_inpainting",
+    "condition_reference": "G_bad",
+    "posebusters_config": "posebusters/config/dock.yml",
+    "posebusters_config_sha256": "6b76d53a01fe9f7a8ac503eed87995e6323f1bc06274dc8f810ef970f89608f3",
+    "posebusters_version": "0.3.1",
+    "rdkit_version": "2025.03.6",
+    "repository_head_at_execution": "601c2f8615c8a5c837ddb68e4b21b644ac8995bf",
+    "strain_force_field": "MMFF94s",
+    "strain_max_iterations": 500
+  },
+  "status": "completed"
+}

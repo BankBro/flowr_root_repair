@@ -1,0 +1,13 @@
+{
+  "baseline_sdfs": 10,
+  "cases_sha256": "bd88d952b964fb3926c459307974cdc85a3f1b5d5090a22d3082111d96b0d527",
+  "coordinate_only_artifacts": 50,
+  "experiment_id": "20260723-03-official-metrics-reevaluation",
+  "generated_artifacts": 100,
+  "input_manifest_sha256": "d9071728ccd8af37271e66c9c7d5070842c1a1935322ce77f50b43b886403dc3",
+  "official_inpainting_artifacts": 50,
+  "posebusters_config": "posebusters/config/dock.yml",
+  "posebusters_config_sha256": "6b76d53a01fe9f7a8ac503eed87995e6323f1bc06274dc8f810ef970f89608f3",
+  "protein_pdbs": 5,
+  "status": "passed"
+}
