@@ -24,6 +24,8 @@ dependencies:
   - conda-forge::numpy=1.26.4
   - conda-forge::scipy=1.16.3
   - conda-forge::pandas=2.3.3
+  # Keep Arrow on Conda so pandas and RDKit share the environment C++ runtime.
+  - conda-forge::pyarrow=22.0.0
   - conda-forge::scikit-learn=1.8.0
   
   # Visualization
@@ -71,6 +73,8 @@ dependencies:
   - conda-forge::filelock=3.20.1
   
   # Schrodinger channel
+  # PyMOL 3.1.7.2 is linked against the Catch2 3.13.0 SONAME.
+  - conda-forge::catch2=3.13.0
   - schrodinger::pymol-bundle=3.1.6.1
   
   # MX channel
@@ -91,6 +95,8 @@ dependencies:
       - torch_geometric==2.7.0
       - tensordict==0.10.0
       - gemmi==0.7.4
+      # Required by pdb2pqr from pymol-bundle.
+      - docutils==0.17.1
       # FLOWR Visualization web server
       - fastapi>=0.104.0
       - uvicorn[standard]>=0.24.0
