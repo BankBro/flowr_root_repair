@@ -57,6 +57,259 @@ def molecular_graph_signature(mol: Chem.Mol) -> tuple[Any, ...]:
     return atoms, bonds
 
 
+def canonical_isomeric_smiles(mol: Chem.Mol | None) -> str | None:
+    """Return a canonical stereo-aware identity after RDKit sanitization."""
+    if mol is None:
+        return None
+    try:
+        sanitized = Chem.Mol(mol)
+        Chem.SanitizeMol(sanitized)
+        return Chem.MolToSmiles(
+            sanitized,
+            canonical=True,
+            isomericSmiles=True,
+        )
+    except Exception:
+        return None
+
+
+def _atom_identity(atom: Chem.Atom) -> tuple[Any, ...]:
+    return (
+        atom.GetAtomicNum(),
+        atom.GetFormalCharge(),
+        atom.GetIsotope(),
+        atom.GetIsAromatic(),
+    )
+
+
+def _bond_identity(bond: Chem.Bond | None) -> tuple[Any, ...] | None:
+    if bond is None:
+        return None
+    return str(bond.GetBondType()), bond.GetIsAromatic()
+
+
+def fixed_fragment_matches(
+    mol_pred: Chem.Mol | None,
+    mol_reference: Chem.Mol,
+    output_to_reference: np.ndarray,
+    fixed_reference_indices: np.ndarray,
+) -> tuple[bool, bool]:
+    """Check atom identities and the induced fixed-fragment graph under reordering."""
+    if mol_pred is None:
+        return False, False
+
+    try:
+        sanitized_pred = Chem.Mol(mol_pred)
+        sanitized_reference = Chem.Mol(mol_reference)
+        Chem.SanitizeMol(sanitized_pred)
+        Chem.SanitizeMol(sanitized_reference)
+    except Exception:
+        return False, False
+
+    output_to_reference = np.asarray(output_to_reference, dtype=int)
+    fixed_reference_indices = np.asarray(fixed_reference_indices, dtype=int)
+    if sanitized_pred.GetNumAtoms() != output_to_reference.size:
+        return False, False
+
+    fixed_set = set(fixed_reference_indices.tolist())
+    output_indices = [
+        output_index
+        for output_index, reference_index in enumerate(output_to_reference.tolist())
+        if reference_index in fixed_set
+    ]
+    if len(output_indices) != fixed_reference_indices.size:
+        return False, False
+
+    atoms_ok = all(
+        _atom_identity(sanitized_pred.GetAtomWithIdx(output_index))
+        == _atom_identity(
+            sanitized_reference.GetAtomWithIdx(int(output_to_reference[output_index]))
+        )
+        for output_index in output_indices
+    )
+    bonds_ok = True
+    for left_pos, left_output in enumerate(output_indices):
+        left_reference = int(output_to_reference[left_output])
+        for right_output in output_indices[left_pos + 1 :]:
+            right_reference = int(output_to_reference[right_output])
+            pred_bond = sanitized_pred.GetBondBetweenAtoms(left_output, right_output)
+            reference_bond = sanitized_reference.GetBondBetweenAtoms(
+                left_reference, right_reference
+            )
+            if _bond_identity(pred_bond) != _bond_identity(reference_bond):
+                bonds_ok = False
+                break
+        if not bonds_ok:
+            break
+    return bool(atoms_ok), bool(bonds_ok)
+
+
+def _empty_pose_metrics() -> dict[str, Any]:
+    return {
+        "finite_coords": False,
+        "sanitized": False,
+        "no_protein_clash": False,
+        "num_pairwise_clashes": -1,
+        "min_relative_distance": float("nan"),
+        "bond_lengths_ok": False,
+        "bond_angles_ok": False,
+        "no_internal_clash": False,
+        "geometry_ok": False,
+    }
+
+
+def evaluate_inpainting_candidate(
+    mol_pred: Chem.Mol | None,
+    mol_bad: Chem.Mol,
+    protein_mol: Chem.Mol,
+    coords_output: np.ndarray,
+    coords_bad: np.ndarray,
+    fixed_reference_indices: np.ndarray,
+    output_to_reference: np.ndarray,
+    *,
+    coords_good: np.ndarray | None = None,
+    raw_fixed_drift: float | None = None,
+    fixed_drift_tolerance: float = 1e-5,
+    run_completed: bool = True,
+) -> dict[str, Any]:
+    """Evaluate native local redesign and strict same-molecule repair endpoints."""
+    coords_output = np.asarray(coords_output, dtype=float)
+    coords_bad = np.asarray(coords_bad, dtype=float)
+    output_to_reference = np.asarray(output_to_reference, dtype=int)
+    fixed_reference_indices = np.asarray(fixed_reference_indices, dtype=int)
+
+    shape_ok = coords_output.shape == (output_to_reference.size, 3)
+    mapping_ok = bool(
+        output_to_reference.size == coords_bad.shape[0]
+        and np.array_equal(np.sort(output_to_reference), np.arange(coords_bad.shape[0]))
+    )
+    if shape_ok and mapping_ok:
+        coords_reference_order = np.empty_like(coords_output)
+        coords_reference_order[output_to_reference] = coords_output
+        calculated_fixed_drift = (
+            float(
+                np.linalg.norm(
+                    coords_reference_order[fixed_reference_indices]
+                    - coords_bad[fixed_reference_indices],
+                    axis=-1,
+                ).max()
+            )
+            if fixed_reference_indices.size
+            else 0.0
+        )
+    else:
+        coords_reference_order = np.full_like(coords_bad, np.nan, dtype=float)
+        calculated_fixed_drift = float("inf")
+
+    maximum_fixed_drift = (
+        calculated_fixed_drift if raw_fixed_drift is None else float(raw_fixed_drift)
+    )
+    fixed_coords_ok = bool(
+        np.isfinite(maximum_fixed_drift)
+        and maximum_fixed_drift <= fixed_drift_tolerance
+    )
+
+    pose = evaluate_pose(mol_pred, protein_mol) if mol_pred is not None else _empty_pose_metrics()
+    canonical_pred = canonical_isomeric_smiles(mol_pred)
+    canonical_bad = canonical_isomeric_smiles(mol_bad)
+    single_component = bool(
+        canonical_pred is not None
+        and mol_pred is not None
+        and len(Chem.GetMolFrags(mol_pred)) == 1
+    )
+    fixed_atoms_ok, fixed_bonds_ok = fixed_fragment_matches(
+        mol_pred,
+        mol_bad,
+        output_to_reference,
+        fixed_reference_indices,
+    )
+    fixed_fragment_retained = bool(
+        fixed_coords_ok and fixed_atoms_ok and fixed_bonds_ok
+    )
+    same_molecule = bool(
+        canonical_pred is not None
+        and canonical_bad is not None
+        and canonical_pred == canonical_bad
+    )
+
+    editable_mask = np.ones(coords_bad.shape[0], dtype=bool)
+    editable_mask[fixed_reference_indices] = False
+    if coords_good is None or not shape_ok or not mapping_ok:
+        editable_rmsd = float("nan")
+        all_atom_rmsd = float("nan")
+    else:
+        coords_good = np.asarray(coords_good, dtype=float)
+        editable_rmsd = _direct_rmsd(
+            coords_reference_order, coords_good, editable_mask
+        )
+        all_atom_rmsd = _direct_rmsd(
+            coords_reference_order,
+            coords_good,
+            np.ones(coords_bad.shape[0], dtype=bool),
+        )
+
+    usable_output = bool(
+        run_completed
+        and pose["finite_coords"]
+        and pose["sanitized"]
+        and single_component
+        and fixed_fragment_retained
+    )
+    native_success = bool(
+        usable_output and pose["no_protein_clash"] and pose["geometry_ok"]
+    )
+    strict_success = bool(native_success and same_molecule)
+    return {
+        **pose,
+        "single_component": single_component,
+        "fixed_atoms_ok": fixed_atoms_ok,
+        "fixed_bonds_ok": fixed_bonds_ok,
+        "fixed_coords_ok": fixed_coords_ok,
+        "fixed_fragment_retained": fixed_fragment_retained,
+        "raw_max_fixed_drift": maximum_fixed_drift,
+        "same_molecule": same_molecule,
+        "canonical_isomeric_smiles": canonical_pred or "",
+        "editable_rmsd_to_good": editable_rmsd,
+        "all_atom_rmsd_to_good": all_atom_rmsd,
+        "usable_output": usable_output,
+        "native_success": native_success,
+        "strict_success": strict_success,
+    }
+
+
+def summarize_repair_funnel(records: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Build cumulative native and strict endpoint attrition counts."""
+    records = list(records)
+    predicates = [
+        ("attempted", lambda record: True),
+        (
+            "completed_usable_fixed",
+            lambda record: record.get("run_status") == "completed"
+            and bool(record.get("usable_output", False)),
+        ),
+        ("no_protein_clash", lambda record: bool(record.get("no_protein_clash", False))),
+        ("internal_geometry", lambda record: bool(record.get("geometry_ok", False))),
+        ("same_molecule", lambda record: bool(record.get("same_molecule", False))),
+    ]
+    active = list(records)
+    funnel = []
+    previous = len(active)
+    for stage, predicate in predicates:
+        if stage != "attempted":
+            active = [record for record in active if predicate(record)]
+        remaining = len(active)
+        funnel.append(
+            {
+                "stage": stage,
+                "eliminated_at_stage": 0 if stage == "attempted" else previous - remaining,
+                "remaining": remaining,
+                "fraction_of_attempts": remaining / len(records) if records else 0.0,
+            }
+        )
+        previous = remaining
+    return funnel
+
+
 def evaluate_pose(mol: Chem.Mol, protein_mol: Chem.Mol) -> dict[str, Any]:
     """Run the frozen intermolecular and internal geometry checks."""
     from posebusters.modules.distance_geometry import check_geometry

@@ -1,0 +1,23 @@
+{
+  "bad_sdf_hashes": {
+    "3rog__1__1.A__1.B": "3c3abb753877de3f42ea4738db2a31dffe591e845044ea28dc81af5bcdbeb82d",
+    "4bv5__2__1.B__1.D": "cdfe075981c09c63b4553fc117393aa94e68ef18573a9fd4dda329d1e3f5fcb6",
+    "4f0s__1__1.A__1.B": "5e971a4f30e7b736a3e2556345542cc82ffedcda753b11ac2ae278bcc62ce523",
+    "6pvz__1__1.A__1.C": "b734cfc27047edb65eced68b95ac5484440eef8f4c42898b16b5bf79a3a69cce",
+    "7ddl__1__1.A__1.T": "a78c6729f2cf23663973add269dcbe2d401a7f2c2c55e6f2abdb626aff3ad9aa"
+  },
+  "case_count": 5,
+  "checkpoint_sha256": "b818f41dc12ffb6bc558bb0ad997055581e07cd9e49dcac1b794ed9993c46e4c",
+  "coordinate_only_reproduced": {
+    "native_successes": 14,
+    "runs": 50,
+    "strict_successes": 13
+  },
+  "experiment_id": "20260723-02-official-fragment-inpainting-control",
+  "source_hashes": {
+    "cases.json": "bd88d952b964fb3926c459307974cdc85a3f1b5d5090a22d3082111d96b0d527",
+    "runs.csv": "7c8c2ffae13cbff371e06282cb2f1590350e6d04740f848ed3abdb9e3e72cd6e",
+    "summary.json": "07fbdcc015730419e81c97a63d7fe7cd00cbeb445df6bf750f9b76fbeaa4948c"
+  },
+  "status": "passed"
+}
