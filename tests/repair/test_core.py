@@ -9,10 +9,12 @@ from flowr.repair import (
     build_torsion_corruption,
     classify_experiment,
     copy_mol_with_coords,
+    enumerate_torsion_candidates,
     max_fixed_coordinate_drift,
     molecular_graph_signature,
     project_coordinate_only_state,
     sample_oracle_repair,
+    smaller_rotatable_branches,
     states_have_same_discrete_graph,
 )
 
@@ -57,6 +59,38 @@ def test_torsion_corruption_uses_right_hand_rule_and_keeps_axis_fixed():
 def test_torsion_corruption_rejects_axis_atoms_as_editable():
     with pytest.raises(ValueError, match="axis atoms"):
         build_torsion_corruption(torch.zeros(3, 3), 0, 1, [1, 2], 30.0)
+
+
+def test_rotatable_branch_uses_deterministic_smaller_side():
+    mol = Chem.MolFromSmiles("CCCO")
+    conformer = Chem.Conformer(mol.GetNumAtoms())
+    positions = [(0.0, 1.0, 0.0), (0.0, 0.0, 0.0), (1.0, 0.0, 0.0), (1.0, 0.0, 1.0)]
+    for index, position in enumerate(positions):
+        conformer.SetAtomPosition(index, position)
+    mol.AddConformer(conformer)
+
+    branches = smaller_rotatable_branches(mol)
+
+    assert len(branches) == 1
+    assert branches[0].editable_atom_indices == (0,)
+    assert {branches[0].axis_origin, branches[0].axis_target} == {1, 2}
+
+
+def test_torsion_candidate_grid_keeps_axis_and_noneditable_atoms_exact():
+    mol = Chem.MolFromSmiles("CCCO")
+    conformer = Chem.Conformer(mol.GetNumAtoms())
+    positions = [(0.0, 1.0, 0.0), (0.0, 0.0, 0.0), (1.0, 0.0, 0.0), (1.0, 0.0, 1.0)]
+    for index, position in enumerate(positions):
+        conformer.SetAtomPosition(index, position)
+    mol.AddConformer(conformer)
+    reference = np.asarray(conformer.GetPositions())
+
+    candidates = enumerate_torsion_candidates(mol)
+
+    assert len(candidates) == 11
+    editable = set(candidates[0].editable_atom_indices)
+    fixed = [index for index in range(mol.GetNumAtoms()) if index not in editable]
+    assert np.array_equal(candidates[0].coords[fixed], reference[fixed])
 
 
 def _state(coords):
