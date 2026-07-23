@@ -1,0 +1,93 @@
+:1.D - prepared
+     RDKit          3D
+
+ 20 21  0  0  1  0  0  0  0  0999 V2000
+   -5.0744   21.0333   17.0260 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -5.3549   21.0396   15.6630 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.3553   21.3714   14.7410 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.0798   21.7259   15.1912 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.7999   21.7173   16.5563 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.7961   21.3674   17.4662 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.6012   18.4750   12.6808 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.5392   17.6490   10.6825 N   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.9178   17.1669   10.6883 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.7328   21.3527   12.9825 S   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.5849   20.4803   12.4027 N   0  0  0  0  0  0  0  0  0  0  0  0
+   -4.5683   22.7235   12.5060 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -6.0849   20.7963   12.8834 O   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.6910   16.6486    9.2091 C   0  0  1  0  0  0  0  0  0  0  0  0
+   -1.3750   17.9670    8.4731 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.4172   18.6050    9.4840 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -2.6304   18.5501   11.3237 C   0  0  1  0  0  0  0  0  0  0  0  0
+    0.3325   16.4558   10.4948 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -3.7060   19.1934   12.2326 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.3101   15.9398    9.2654 C   0  0  0  0  0  0  0  0  0  0  0  0
+  2  1  2  0
+  3  2  1  0
+  4  3  2  0
+  5  4  1  0
+  6  1  1  0
+  6  5  2  0
+  9  8  1  0
+ 10  3  1  0
+ 11 10  1  0
+ 12 10  2  0
+ 13 10  2  0
+ 14  9  1  1
+ 15 14  1  0
+ 16 15  1  0
+ 17 16  1  0
+ 18 17  1  0
+ 19  7  2  0
+ 19 11  1  0
+ 17 19  1  1
+ 20 14  1  0
+ 20 18  1  0
+M  CHG  2   8   1  11  -1
+M  END
+>  <i_m_source_file_index>  (1) 
+1
+
+>  <b_ppw_prepared>  (1) 
+1
+
+>  <r_ppw_minimizer_energy>  (1) 
+-3108.8576763536325
+
+>  <r_ppw_minimizer_rmsd>  (1) 
+0.27302603484083404
+
+>  <r_ppw_preprocess_pH>  (1) 
+7.4000000000000004
+
+>  <s_ff_OPLSVersion>  (1) 
+OPLS4
+
+>  <s_m_source_file>  (1) 
+/hpfs/projects/mlcs/mlhub/datasets/plinder/data/val/4bv5__2__1.B__1.D.pdb
+
+>  <s_pdb_PDB_format_version>  (1) 
+3.0
+
+>  <s_ppw_het_states>  (1) 
+eJztkt1qg0AUhF9F9tqEc1bdXfsqIYikm1SwWjQpFMm7d39sZgO5KoTe9CbMzkbnnM9ZRPNpp7kbh0a8ZJq4UHnmvLa/WO8sgt3vbhGHt3Y62dkfdiypzDPa55mXFaSC1JAGsr5JJkjOM16lhFtAIo2RxkhjpDHSGGkSaZIhkSZDmtNinF4dkGTPuKJcN4hGfZvY38XNGRDi/jI1/DoMNhELg1B8qQScOJ5MEAU6Cai4NwNXJHVvYPTVUDDKnxQGxkjwzpAYPdwFsAzGES+DdIR8byAl3K0v9cA/7ND25y9HvNy6zWvShkxpiP2O4t2e276J/+lC/5ars+fDOFl3GC59747dcByb+TwlztyMU3fq3HPOPLb9bN1zz+nxhpOv9F/kh0VOET2vyBIY/7LItCUio5kKVRWGjTGyrB+XWfjxQ/dNpVTFpLWWSrPdkP510ffX6zedNFFc
+
+>  <s_ppw_prepared_with_version>  (1) 
+2025-2
+
+>  <experiment_id>  (1) 
+20260723-01-oracle-mask-repair-pilot
+
+>  <stage>  (1) 
+formal
+
+>  <system_id>  (1) 
+4bv5__2__1.B__1.D
+
+>  <seed>  (1) 
+2026072332
+
+>  <success>  (1) 
+False
+
+$$$$

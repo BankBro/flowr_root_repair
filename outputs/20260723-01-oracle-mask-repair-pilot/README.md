@@ -2,7 +2,7 @@
 
 **实验 ID:** `20260723-01-oracle-mask-repair-pilot`
 
-**状态:** Preflight 已通过, 待正式运行
+**状态:** 已完成, 结论为 `CONDITIONAL`, 14/50 成功
 
 **来源:** [../../experiments/20260723-01-oracle-mask-repair-pilot/](../../experiments/20260723-01-oracle-mask-repair-pilot/)
 

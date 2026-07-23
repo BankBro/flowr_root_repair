@@ -4,11 +4,12 @@
 
 ## 当前阶段
 
-- 首版修复方案已经完成设计整理, 当前进入首个 oracle-mask repair pilot.
+- 首个 oracle-mask repair pilot 已完成, 冻结 gate 结论为 `CONDITIONAL`.
 - 当前计划: [20260723-01-oracle-mask-repair-pilot-plan.md](plan/20260723-01-oracle-mask-repair-pilot-plan.md).
 - 上位设计: [20260722-01-flowr-root-ligand-repair-v1-plan.md](plan/20260722-01-flowr-root-ligand-repair-v1-plan.md).
 - 首版范围: 诊断蛋白质-配体 clash, 定位需要移动的配体原子, 并使用 FLOWR.ROOT 进行 coordinate-only 局部修复.
-- 已创建 `20260723-01-oracle-mask-repair-pilot` 的 experiment 和 output 骨架, 正在实现 coordinate-only oracle 修复路径.
+- 正式实验 50/50 正常完成, 14/50 成功. 固定坐标和离散图保持 50/50, 主要瓶颈是可编辑区域的内部几何.
+- 实验报告: [20260723-01-oracle-mask-repair-pilot-report.md](report/20260723-01-oracle-mask-repair-pilot-report.md).
 
 ## 已确认边界
 
@@ -20,6 +21,6 @@
 
 ## 下一步
 
-1. 实现并测试可复用的 coordinate-only oracle 修复内核.
-2. 完成 CPU preflight 与 5 步、100 步 GPU smoke.
-3. 运行冻结的 5 个样本 x 10 个 seed 正式实验并形成 report.
+1. 新建独立 plan, 在 oracle mask 条件下验证能够保持局部共价几何的修复表示或约束.
+2. 保留本轮冻结协议作为对照, 不在已完成实验内调参.
+3. Oracle 修复达到 GO 标准后, 再进入 Fixed Mask Head 训练.

@@ -4,7 +4,7 @@
 
 **上位设计:** [20260722-01-flowr-root-ligand-repair-v1-plan.md](20260722-01-flowr-root-ligand-repair-v1-plan.md)
 
-**状态:** 协议已冻结, 待执行
+**状态:** 已执行, 结论为 `CONDITIONAL`
 
 ## 1. 目标
 

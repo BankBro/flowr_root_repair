@@ -1,0 +1,111 @@
+:1.T - prepared
+     RDKit          3D
+
+ 28 32  0  0  1  0  0  0  0  0999 V2000
+    2.8950  -22.5396   53.4411 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.8504  -21.4583   53.0335 C   0  0  2  0  0  0  0  0  0  0  0  0
+    0.5506  -22.1921   52.5586 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.6980  -22.8951   51.2017 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.1196  -21.9136   50.0742 C   0  0  2  0  0  0  0  0  0  0  0  0
+    1.2074  -22.6181   48.6599 C   0  0  1  0  0  0  0  0  0  0  0  0
+    2.2043  -23.8110   48.6714 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.1558  -23.2065   48.1670 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -1.2253  -22.1388   47.8507 C   0  0  0  0  0  0  0  0  0  0  0  0
+   -0.7245  -21.1288   46.7998 C   0  0  2  0  0  0  0  0  0  0  0  0
+   -0.5778  -21.7787   45.5553 O   0  0  0  0  0  0  0  0  0  0  0  0
+    0.6105  -20.5151   47.2532 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.6985  -21.5760   47.5900 C   0  0  1  0  0  0  0  0  0  0  0  0
+    3.0380  -20.9211   48.0048 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.9291  -20.2252   49.3716 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.4589  -21.1992   50.4919 C   0  0  1  0  0  0  0  0  0  0  0  0
+    2.3555  -20.4978   51.8966 C   0  0  2  0  0  0  0  0  0  0  0  0
+    3.6484  -19.9615   52.1612 O   0  0  0  0  0  0  0  0  0  0  0  0
+    1.3897  -19.3064   52.0211 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.1824  -19.0938   53.5294 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.4437  -20.4719   54.1921 C   0  0  2  0  0  0  0  0  0  0  0  0
+    2.4155  -20.4016   55.3769 C   0  0  0  0  0  0  0  0  0  0  0  0
+    4.5599  -19.5748   56.6426 C   0  0  0  0  0  0  0  0  0  0  0  0
+    5.7220  -20.1915   56.7426 C   0  0  0  0  0  0  0  0  0  0  0  0
+    3.7397  -19.6145   55.3138 C   0  0  0  0  0  0  0  0  0  0  0  0
+    2.3617  -21.4142   56.2424 O   0  0  0  0  0  0  0  0  0  0  0  0
+    3.9505  -18.8592   57.6672 O   0  0  0  0  0  0  0  0  0  0  0  0
+    4.4739  -18.9671   59.0095 C   0  0  0  0  0  0  0  0  0  0  0  0
+  2  1  1  1
+  3  2  1  0
+  4  3  1  0
+  5  4  1  1
+  6  5  1  0
+  6  7  1  1
+  8  6  1  0
+  9  8  1  0
+ 10  9  1  0
+ 10 11  1  6
+ 12 10  1  0
+ 13  6  1  0
+ 13 12  1  1
+ 14 13  1  0
+ 15 14  1  0
+ 16  5  1  0
+ 16 15  1  6
+ 17  2  1  0
+ 17 16  1  0
+ 17 18  1  1
+ 19 17  1  0
+ 20 19  1  0
+ 21  2  1  0
+ 21 20  1  0
+ 21 22  1  1
+ 23 22  1  0
+ 24 23  2  0
+ 25 24  1  0
+ 26 25  2  0
+ 27 25  1  0
+ 28 22  2  0
+ 28 27  1  0
+M  END
+>  <i_m_source_file_index>  (1) 
+1
+
+>  <b_ppw_prepared>  (1) 
+1
+
+>  <r_ppw_minimizer_energy>  (1) 
+-37699.470168605083
+
+>  <r_ppw_minimizer_rmsd>  (1) 
+0.29670085038813787
+
+>  <r_ppw_preprocess_pH>  (1) 
+7.4000000000000004
+
+>  <s_ff_OPLSVersion>  (1) 
+OPLS4
+
+>  <s_m_source_file>  (1) 
+/hpfs/projects/mlcs/mlhub/datasets/plinder/data/val/7ddl__1__1.A__1.T.pdb
+
+>  <s_pdb_PDB_format_version>  (1) 
+3.0
+
+>  <s_ppw_het_states>  (1) 
+eJzdlN1q20AQhV/F6No2uzuzf3mVUIRIlVSgWEFyCsX43burUb3HUi8DAd+Io89anTM/1qWqf7fj1A2nunraeaXJ7XeJNf1nm8ml0un6fKlefjXjWzvlm2dLzux36sd+lyUVyUXaIl2RvshQZLxJr4rURRY3P7slXQ3jzxQc8kgUXVJJoHvgCuAZpJym5JSIuqSVoPcgliMhgxxal/wS3dwBs35iTprL+GhPTX/+k+rQ6hiCdcReGRdMDOlQ9d6em76Wh7q5/ZdrwtPLMLbp5vTZ9+m2O70O9XQegUz1MHZvXTqX4GvTT2069/1jPOgyx4N+zEGqo9LKRGd1ugT2geKDT/JB/5HmaG2MHEJ03jhvv/oPmd3M9vOqrTX/Zpg1g7agHWgPOoCORZMCrUEb0OBL4EvgS+BL4EvgS+DL4Mvgy+DL4Mvgy+DL4Mvgy+DL4GvVfxZz6e3SVg0tXrq7QrmQFWICZOWgA+QEeUBeUNggQhTkqbhBpLYIos4/y0w1zHcZrYYxLxNeI+gE8fb1UiNBjSQ1EtRI24IobFo4a1mJNYL0LOkZ0rPZ9J5ljgzpeZmQ3aC8DAaWatmnG5KCGApiKShvl1khKIjj7fXrr4c7Gq0Dx+BV2hPD3B5U+OovyPX6F3k3QYc=
+
+>  <s_ppw_prepared_with_version>  (1) 
+2025-2
+
+>  <experiment_id>  (1) 
+20260723-01-oracle-mask-repair-pilot
+
+>  <stage>  (1) 
+formal
+
+>  <system_id>  (1) 
+7ddl__1__1.A__1.T
+
+>  <seed>  (1) 
+2026072315
+
+>  <success>  (1) 
+False
+
+$$$$

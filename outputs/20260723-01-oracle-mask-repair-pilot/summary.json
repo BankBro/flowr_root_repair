@@ -1,0 +1,185 @@
+{
+  "checkpoint_sha256": "b818f41dc12ffb6bc558bb0ad997055581e07cd9e49dcac1b794ed9993c46e4c",
+  "device": "NVIDIA GeForce RTX 3090",
+  "diagnostics": {
+    "all_atom_rmsd_to_good": {
+      "max": 2.1499679479817098,
+      "mean": 1.1840560338022137,
+      "median": 1.39628267142773,
+      "min": 0.06171540034986553
+    },
+    "editable_rmsd_to_good": {
+      "max": 3.4898763619101194,
+      "mean": 2.2662120805289065,
+      "median": 2.509818752410656,
+      "min": 0.1593484785063684
+    },
+    "peak_gpu_memory_mb": {
+      "max": 1753.56396484375,
+      "mean": 1163.7775390625,
+      "median": 1248.4619140625,
+      "min": 620.63623046875
+    },
+    "per_case": {
+      "3rog__1__1.A__1.B": {
+        "all_atom_rmsd_to_good": {
+          "max": 1.5231069137609736,
+          "mean": 1.4249394860805782,
+          "median": 1.4286292017660704,
+          "min": 1.2884048554334748
+        },
+        "editable_rmsd_to_good": {
+          "max": 3.4898763619101194,
+          "mean": 3.2649465278478615,
+          "median": 3.273400728558679,
+          "min": 2.9521063878862672
+        },
+        "remaining_clashes": {
+          "max": 2.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "min": 0.0
+        }
+      },
+      "4bv5__2__1.B__1.D": {
+        "all_atom_rmsd_to_good": {
+          "max": 1.8366877742948264,
+          "mean": 1.5607515656432112,
+          "median": 1.569387637627523,
+          "min": 1.3945392386143796
+        },
+        "editable_rmsd_to_good": {
+          "max": 3.1045689741062437,
+          "mean": 2.6381516525551065,
+          "median": 2.652749278518473,
+          "min": 2.357201541801618
+        },
+        "remaining_clashes": {
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0
+        }
+      },
+      "4f0s__1__1.A__1.B": {
+        "all_atom_rmsd_to_good": {
+          "max": 2.1499679479817098,
+          "mean": 1.704765623815287,
+          "median": 1.7543523481779195,
+          "min": 1.270371067278559
+        },
+        "editable_rmsd_to_good": {
+          "max": 3.3133231311182314,
+          "mean": 2.6272202708067747,
+          "median": 2.7036385453123684,
+          "min": 1.9577732990246481
+        },
+        "remaining_clashes": {
+          "max": 1.0,
+          "mean": 0.3,
+          "median": 0.0,
+          "min": 0.0
+        }
+      },
+      "6pvz__1__1.A__1.C": {
+        "all_atom_rmsd_to_good": {
+          "max": 0.7063462751523641,
+          "mean": 0.3414873630077434,
+          "median": 0.1504695696440615,
+          "min": 0.06171540034986553
+        },
+        "editable_rmsd_to_good": {
+          "max": 1.823778240213832,
+          "mean": 0.8817165799128512,
+          "median": 0.38851075822829817,
+          "min": 0.1593484785063684
+        },
+        "remaining_clashes": {
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0
+        }
+      },
+      "7ddl__1__1.A__1.T": {
+        "all_atom_rmsd_to_good": {
+          "max": 1.269032095524059,
+          "mean": 0.8883361304642493,
+          "median": 0.8748975907213166,
+          "min": 0.44149163410581543
+        },
+        "editable_rmsd_to_good": {
+          "max": 2.74142264968286,
+          "mean": 1.9190253715219385,
+          "median": 1.8899948077088728,
+          "min": 0.9537309337187166
+        },
+        "remaining_clashes": {
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0
+        }
+      }
+    },
+    "runtime_seconds": {
+      "max": 1.593379421159625,
+      "mean": 1.4898001249879598,
+      "median": 1.4758659731596708,
+      "min": 1.437509979121387
+    }
+  },
+  "experiment_id": "20260723-01-oracle-mask-repair-pilot",
+  "failure_counts": {
+    "fixed_coords_ok": 0,
+    "geometry_ok": 30,
+    "graph_unchanged": 0,
+    "no_protein_clash": 10
+  },
+  "gate": {
+    "complete": true,
+    "outcome": "CONDITIONAL",
+    "overall_success_rate": 0.28,
+    "per_case": {
+      "3rog__1__1.A__1.B": {
+        "runs": 10,
+        "success_rate": 0.3,
+        "successes": 3
+      },
+      "4bv5__2__1.B__1.D": {
+        "runs": 10,
+        "success_rate": 0.0,
+        "successes": 0
+      },
+      "4f0s__1__1.A__1.B": {
+        "runs": 10,
+        "success_rate": 0.1,
+        "successes": 1
+      },
+      "6pvz__1__1.A__1.C": {
+        "runs": 10,
+        "success_rate": 1.0,
+        "successes": 10
+      },
+      "7ddl__1__1.A__1.T": {
+        "runs": 10,
+        "success_rate": 0.0,
+        "successes": 0
+      }
+    },
+    "total_runs": 50,
+    "total_successes": 14
+  },
+  "implementation_commit": "bb75146025149443824edf59b48847949aaa484b",
+  "protocol": {
+    "corrector_iters": 0,
+    "formal_seed_base": 2026072300,
+    "rollouts_per_case": 10,
+    "schedule": "linear",
+    "solver": "euler",
+    "steps": 100
+  },
+  "run_status_counts": {
+    "completed": 50
+  }
+}
