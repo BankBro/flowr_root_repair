@@ -1,0 +1,6 @@
+inputs/
+repairs/
+logs/
+smoke/
+tmp/
+*.tmp

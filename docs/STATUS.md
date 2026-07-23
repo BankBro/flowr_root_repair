@@ -4,12 +4,12 @@
 
 ## 当前阶段
 
-- Official fragment inpainting control 已完成, strict gate 结论为 `NO-GO`.
-- 最近计划: [20260723-02-official-fragment-inpainting-control-plan.md](plan/20260723-02-official-fragment-inpainting-control-plan.md).
+- SPINDR 全测试集 oracle repair benchmark 已完成, 225 个条目中 211 个可自动构造中等强度扭转 clash.
+- 最近计划: [20260723-04-full-test-oracle-repair-benchmark-plan.md](plan/20260723-04-full-test-oracle-repair-benchmark-plan.md).
 - 上位设计: [20260722-01-flowr-root-ligand-repair-v1-plan.md](plan/20260722-01-flowr-root-ligand-repair-v1-plan.md).
-- 同一评估器下, coordinate-only 为 native `14/50`、strict `13/50`; 官方完整 inpainting 为 native `14/50`、strict `7/50`.
-- 官方方法能在部分案例生成有效的新局部结构, 但不能作为严格同分子坐标修复器的直接替代.
-- 实验报告: [20260723-02-official-fragment-inpainting-control-report.md](report/20260723-02-official-fragment-inpainting-control-report.md).
+- 211 case x 10 seed 下, coordinate-only strict 为 `584/2110`, official inpainting strict 为 `424/2110`; case-cluster 95% CI 支持 coordinate-only 更高.
+- 官方质量下, coordinate-only 为 `606/2110`, official inpainting 为 `1209/2110`; official inpainting 生成质量更好, 但大量结果改变完整分子身份.
+- 实验报告: [20260723-04-full-test-oracle-repair-benchmark-report.md](report/20260723-04-full-test-oracle-repair-benchmark-report.md).
 
 ## 已确认边界
 
@@ -21,6 +21,6 @@
 
 ## 下一步
 
-1. 保留两个已冻结实验作为后续 oracle-mask 对照, 不在原实验内调参.
-2. 新建独立 plan, 验证保持同一分子和局部共价几何的坐标表示、约束或采样方式.
-3. Oracle 修复达到 GO 标准后, 再进入 Fixed Mask Head 训练.
+1. 冻结本次 211-case benchmark 作为后续 oracle-mask 对照, 不在原实验内调参.
+2. 新建独立 plan, 优先解决 7 个以上可编辑原子时的键长、键角、internal clash 和 strain 问题.
+3. 同时约束立体化学身份和环/边界共价几何; oracle strict 修复明显提高后, 再进入 Fixed Mask Head 训练.

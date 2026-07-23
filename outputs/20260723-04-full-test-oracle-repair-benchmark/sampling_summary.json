@@ -1,0 +1,10 @@
+{
+  "eligible_cases": 211,
+  "expected_per_method": 2110,
+  "experiment_id": "20260723-04-full-test-oracle-repair-benchmark",
+  "method_counts": {
+    "coordinate_only": 2110,
+    "official_inpainting": 2110
+  },
+  "status": "sampling_complete"
+}

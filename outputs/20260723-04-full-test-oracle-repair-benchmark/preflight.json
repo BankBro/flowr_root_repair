@@ -1,0 +1,12 @@
+{
+  "checkpoint_sha256": "b818f41dc12ffb6bc558bb0ad997055581e07cd9e49dcac1b794ed9993c46e4c",
+  "experiment_id": "20260723-04-full-test-oracle-repair-benchmark",
+  "input_manifest_sha256": "48f37f8521df7a6e72f2db3da749b1542ab6338d372b30dbad243f488f182835",
+  "ligand_sdfs": 225,
+  "official_test_entries": 225,
+  "pocket_cifs": 225,
+  "posebusters_config_sha256": "6b76d53a01fe9f7a8ac503eed87995e6323f1bc06274dc8f810ef970f89608f3",
+  "posebusters_version": "0.3.1",
+  "rdkit_version": "2025.03.6",
+  "status": "passed"
+}

@@ -1,0 +1,15 @@
+{
+  "cases_sha256": "483bb0a19317edd317f9310b75438ac65230abb6d85e152eec8068c37dac6fb1",
+  "construction_sha256": "caf02b12795880af60e56aff6b2cabee8801da4e1fb0ad38513311b6e7823a58",
+  "eligible_cases": 211,
+  "experiment_id": "20260723-04-full-test-oracle-repair-benchmark",
+  "status": "completed",
+  "status_counts": {
+    "baseline_pb_failed": 2,
+    "eligible": 211,
+    "no_isolated_pb_candidate": 1,
+    "no_moderate_candidate": 3,
+    "no_rotatable_bond": 8
+  },
+  "test_entries": 225
+}
