@@ -1,0 +1,11 @@
+system_id,pose,finite_coords,sanitized,no_protein_clash,num_pairwise_clashes,min_relative_distance,bond_lengths_ok,bond_angles_ok,no_internal_clash,geometry_ok
+6pvz__1__1.A__1.C,G_good,True,True,True,0,0.9052384151820391,True,True,True,True
+6pvz__1__1.A__1.C,G_bad,True,True,False,1,0.6342161689659004,True,True,True,True
+7ddl__1__1.A__1.T,G_good,True,True,True,0,0.8774427587029295,True,True,True,True
+7ddl__1__1.A__1.T,G_bad,True,True,False,1,0.7264315443551753,True,True,True,True
+3rog__1__1.A__1.B,G_good,True,True,True,0,0.8462939620114052,True,True,True,True
+3rog__1__1.A__1.B,G_bad,True,True,False,2,0.5965486300621292,True,True,True,True
+4bv5__2__1.B__1.D,G_good,True,True,True,0,0.9138997080030348,True,True,True,True
+4bv5__2__1.B__1.D,G_bad,True,True,False,3,0.6253335356065552,True,True,True,True
+4f0s__1__1.A__1.B,G_good,True,True,True,0,0.87528937146541,True,True,True,True
+4f0s__1__1.A__1.B,G_bad,True,True,False,4,0.5086025288355598,True,True,True,True

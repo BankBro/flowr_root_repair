@@ -1,0 +1,15 @@
+{
+  "case_count": 5,
+  "cases": [
+    "6pvz__1__1.A__1.C",
+    "7ddl__1__1.A__1.T",
+    "3rog__1__1.A__1.B",
+    "4bv5__2__1.B__1.D",
+    "4f0s__1__1.A__1.B"
+  ],
+  "checkpoint_path": ".data/checkpoints/flowr_root/flowr_root_v2.2.ckpt",
+  "checkpoint_sha256": "b818f41dc12ffb6bc558bb0ad997055581e07cd9e49dcac1b794ed9993c46e4c",
+  "experiment_id": "20260723-01-oracle-mask-repair-pilot",
+  "lmdb_validation_count": 68,
+  "status": "passed"
+}
