@@ -46,7 +46,7 @@ def build_exact_fragment_prior(
         raise RuntimeError("official prior did not preserve fixed-first fragment layout")
 
     fixed_indices = torch.where(mask)[0]
-    for field in ("coords", "atomics", "charges", "hybridization"):
+    for field in ("coords", "atomics", "charges"):
         prior_value = getattr(prior, field, None)
         target_value = getattr(target_ligand, field, None)
         if prior_value is None and target_value is None:
