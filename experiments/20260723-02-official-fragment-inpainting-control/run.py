@@ -56,6 +56,7 @@ FORMAL_STEPS = 100
 FORMAL_SEED_BASE = 2026072300
 ROLLOUTS_PER_CASE = 10
 FIXED_DRIFT_TOLERANCE = 1e-5
+SAMPLING_IMPLEMENTATION_COMMIT = "52e114f6fcf48f2797c55279efd2391ea3b5a424"
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parents[1]
@@ -800,12 +801,82 @@ def _numeric_summary(values: list[float]) -> dict[str, float] | None:
     }
 
 
+def _reevaluate_official_artifacts(
+    records: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    materials = {
+        case["system_id"]: SOURCE._prepare_case(case) for case in SOURCE._load_cases()
+    }
+    boolean_mismatches = []
+    audited = []
+    comparison_fields = sorted(BOOL_FIELDS)
+    for record in records:
+        if record["run_status"] != "completed" or not record.get("sdf_path"):
+            audited.append(record)
+            continue
+        material = materials[record["system_id"]]
+        sdf_path = REPO_ROOT / record["sdf_path"]
+        mol_pred = _load_sdf(sdf_path, sanitize=False)
+        coords_pred = np.asarray(mol_pred.GetConformer().GetPositions(), dtype=float)
+        output_to_reference = np.asarray(
+            json.loads(record["output_to_reference"]), dtype=int
+        )
+        metrics = evaluate_inpainting_candidate(
+            mol_pred=mol_pred,
+            mol_bad=material["bad_mol"],
+            protein_mol=material["protein_mol"],
+            coords_output=coords_pred,
+            coords_bad=material["coords_bad"],
+            coords_good=material["coords_good"],
+            fixed_reference_indices=np.flatnonzero(material["fixed_mask"]),
+            output_to_reference=output_to_reference,
+            raw_fixed_drift=record["raw_max_fixed_drift"],
+            fixed_drift_tolerance=FIXED_DRIFT_TOLERANCE,
+            run_completed=True,
+        )
+        changed = [
+            field
+            for field in comparison_fields
+            if bool(record.get(field, False)) != bool(metrics.get(field, False))
+        ]
+        if changed:
+            boolean_mismatches.append(
+                {
+                    "system_id": record["system_id"],
+                    "seed": record["seed"],
+                    "fields": changed,
+                }
+            )
+        audited.append({**record, **metrics})
+
+    _write_csv(OUTPUT_DIR / "official_runs.csv", audited)
+    audit = {
+        "experiment_id": EXPERIMENT_ID,
+        "status": "passed",
+        "audited_completed_sdfs": sum(
+            record["run_status"] == "completed" and bool(record.get("sdf_path"))
+            for record in audited
+        ),
+        "boolean_mismatches_from_prewrite_evaluation": boolean_mismatches,
+        "native_successes_after_artifact_evaluation": sum(
+            record["native_success"] for record in audited
+        ),
+        "strict_successes_after_artifact_evaluation": sum(
+            record["strict_success"] for record in audited
+        ),
+    }
+    _write_json(OUTPUT_DIR / "artifact_audit.json", audit)
+    return audited
+
+
 def summarize_results(device: str = "cuda") -> dict[str, Any]:
     coordinate_records = _read_records(OUTPUT_DIR / "coordinate_only_runs.csv")
     if not coordinate_records:
         run_preflight()
         coordinate_records = _read_records(OUTPUT_DIR / "coordinate_only_runs.csv")
     official_records = _read_records(OUTPUT_DIR / "official_runs.csv")
+    if official_records:
+        official_records = _reevaluate_official_artifacts(official_records)
     coordinate_native = sum(record["native_success"] for record in coordinate_records)
     coordinate_strict = sum(record["strict_success"] for record in coordinate_records)
     official_native = sum(record["native_success"] for record in official_records)
@@ -833,7 +904,8 @@ def summarize_results(device: str = "cuda") -> dict[str, Any]:
     }
     summary = {
         "experiment_id": EXPERIMENT_ID,
-        "implementation_commit": subprocess.check_output(
+        "sampling_implementation_commit": SAMPLING_IMPLEMENTATION_COMMIT,
+        "evaluation_implementation_commit": subprocess.check_output(
             ["git", "rev-parse", "HEAD"], cwd=REPO_ROOT, text=True
         ).strip(),
         "checkpoint_sha256": EXPECTED_CHECKPOINT_SHA256,
