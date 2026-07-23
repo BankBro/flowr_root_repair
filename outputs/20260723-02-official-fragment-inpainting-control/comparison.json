@@ -1,0 +1,134 @@
+{
+  "coordinate_only": {
+    "funnel": [
+      {
+        "eliminated_at_stage": 0,
+        "fraction_of_attempts": 1.0,
+        "remaining": 50,
+        "stage": "attempted"
+      },
+      {
+        "eliminated_at_stage": 0,
+        "fraction_of_attempts": 1.0,
+        "remaining": 50,
+        "stage": "completed_usable_fixed"
+      },
+      {
+        "eliminated_at_stage": 10,
+        "fraction_of_attempts": 0.8,
+        "remaining": 40,
+        "stage": "no_protein_clash"
+      },
+      {
+        "eliminated_at_stage": 26,
+        "fraction_of_attempts": 0.28,
+        "remaining": 14,
+        "stage": "internal_geometry"
+      },
+      {
+        "eliminated_at_stage": 1,
+        "fraction_of_attempts": 0.26,
+        "remaining": 13,
+        "stage": "same_molecule"
+      }
+    ],
+    "native_successes": 14,
+    "per_case": {
+      "3rog__1__1.A__1.B": {
+        "native_successes": 3,
+        "runs": 10,
+        "strict_successes": 3
+      },
+      "4bv5__2__1.B__1.D": {
+        "native_successes": 0,
+        "runs": 10,
+        "strict_successes": 0
+      },
+      "4f0s__1__1.A__1.B": {
+        "native_successes": 1,
+        "runs": 10,
+        "strict_successes": 0
+      },
+      "6pvz__1__1.A__1.C": {
+        "native_successes": 10,
+        "runs": 10,
+        "strict_successes": 10
+      },
+      "7ddl__1__1.A__1.T": {
+        "native_successes": 0,
+        "runs": 10,
+        "strict_successes": 0
+      }
+    },
+    "strict_successes": 13
+  },
+  "denominator": 50,
+  "experiment_id": "20260723-02-official-fragment-inpainting-control",
+  "official_fragment_inpainting": {
+    "funnel": [
+      {
+        "eliminated_at_stage": 0,
+        "fraction_of_attempts": 1.0,
+        "remaining": 50,
+        "stage": "attempted"
+      },
+      {
+        "eliminated_at_stage": 10,
+        "fraction_of_attempts": 0.8,
+        "remaining": 40,
+        "stage": "completed_usable_fixed"
+      },
+      {
+        "eliminated_at_stage": 3,
+        "fraction_of_attempts": 0.74,
+        "remaining": 37,
+        "stage": "no_protein_clash"
+      },
+      {
+        "eliminated_at_stage": 23,
+        "fraction_of_attempts": 0.28,
+        "remaining": 14,
+        "stage": "internal_geometry"
+      },
+      {
+        "eliminated_at_stage": 7,
+        "fraction_of_attempts": 0.14,
+        "remaining": 7,
+        "stage": "same_molecule"
+      }
+    ],
+    "native_successes": 14,
+    "per_case": {
+      "3rog__1__1.A__1.B": {
+        "native_successes": 1,
+        "runs": 10,
+        "strict_successes": 1
+      },
+      "4bv5__2__1.B__1.D": {
+        "native_successes": 6,
+        "runs": 10,
+        "strict_successes": 0
+      },
+      "4f0s__1__1.A__1.B": {
+        "native_successes": 1,
+        "runs": 10,
+        "strict_successes": 0
+      },
+      "6pvz__1__1.A__1.C": {
+        "native_successes": 6,
+        "runs": 10,
+        "strict_successes": 6
+      },
+      "7ddl__1__1.A__1.T": {
+        "native_successes": 0,
+        "runs": 10,
+        "strict_successes": 0
+      }
+    },
+    "strict_successes": 7
+  },
+  "official_minus_coordinate_only_percentage_points": {
+    "native": 0.0,
+    "strict": -12.0
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "checkpoint_sha256": "b818f41dc12ffb6bc558bb0ad997055581e07cd9e49dcac1b794ed9993c46e4c",
+  "device": "NVIDIA GeForce RTX 3090",
+  "diagnostics": {
+    "editable_rmsd_to_good": {
+      "max": 3.6175832625805593,
+      "mean": 2.2964414834990454,
+      "median": 2.3713175592557043,
+      "min": 0.6112767694541752
+    },
+    "peak_gpu_memory_mb": {
+      "max": 979.05810546875,
+      "mean": 682.57099609375,
+      "median": 726.01513671875,
+      "min": 410.1396484375
+    },
+    "raw_max_fixed_drift": {
+      "max": 1.974533267819263e-06,
+      "mean": 1.1548593149007392e-06,
+      "median": 9.567833711565525e-07,
+      "min": 7.532284118589616e-07
+    },
+    "runtime_seconds": {
+      "max": 3.5645767645910382,
+      "mean": 3.355820168443024,
+      "median": 3.348418855573982,
+      "min": 3.241011687554419
+    }
+  },
+  "evaluation_implementation_commit": "5484f985c4f9fa4d44e5318328058a2dd39899c4",
+  "experiment_id": "20260723-02-official-fragment-inpainting-control",
+  "native_gate_descriptive": {
+    "complete": true,
+    "outcome": "CONDITIONAL",
+    "overall_success_rate": 0.28,
+    "per_case": {
+      "3rog__1__1.A__1.B": {
+        "runs": 10,
+        "success_rate": 0.1,
+        "successes": 1
+      },
+      "4bv5__2__1.B__1.D": {
+        "runs": 10,
+        "success_rate": 0.6,
+        "successes": 6
+      },
+      "4f0s__1__1.A__1.B": {
+        "runs": 10,
+        "success_rate": 0.1,
+        "successes": 1
+      },
+      "6pvz__1__1.A__1.C": {
+        "runs": 10,
+        "success_rate": 0.6,
+        "successes": 6
+      },
+      "7ddl__1__1.A__1.T": {
+        "runs": 10,
+        "success_rate": 0.0,
+        "successes": 0
+      }
+    },
+    "total_runs": 50,
+    "total_successes": 14
+  },
+  "protocol": {
+    "batch_size": 1,
+    "corrector_iters": 0,
+    "exact_oracle_mask": true,
+    "final_inpaint": true,
+    "formal_seed_base": 2026072300,
+    "method": "official_fragment_inpainting",
+    "rollouts_per_case": 10,
+    "schedule": "linear",
+    "solver": "euler",
+    "steps": 100
+  },
+  "run_status_counts": {
+    "completed": 50
+  },
+  "sampling_implementation_commit": "52e114f6fcf48f2797c55279efd2391ea3b5a424",
+  "strict_gate": {
+    "complete": true,
+    "outcome": "NO-GO",
+    "overall_success_rate": 0.14,
+    "per_case": {
+      "3rog__1__1.A__1.B": {
+        "runs": 10,
+        "success_rate": 0.1,
+        "successes": 1
+      },
+      "4bv5__2__1.B__1.D": {
+        "runs": 10,
+        "success_rate": 0.0,
+        "successes": 0
+      },
+      "4f0s__1__1.A__1.B": {
+        "runs": 10,
+        "success_rate": 0.0,
+        "successes": 0
+      },
+      "6pvz__1__1.A__1.C": {
+        "runs": 10,
+        "success_rate": 0.6,
+        "successes": 6
+      },
+      "7ddl__1__1.A__1.T": {
+        "runs": 10,
+        "success_rate": 0.0,
+        "successes": 0
+      }
+    },
+    "total_runs": 50,
+    "total_successes": 7
+  }
+}

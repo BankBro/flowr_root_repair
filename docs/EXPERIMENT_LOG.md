@@ -35,3 +35,15 @@
 - 主要终点: 同时报告允许可编辑区换分子的 native local redesign success, 以及要求完整分子身份和立体化学不变的 strict same-molecule repair success.
 - 当前进度: 协议已冻结, experiment/output 骨架已建立, 即将实现共同评估和官方 mask 适配器.
 - 输出位置: `outputs/20260723-02-official-fragment-inpainting-control/`.
+
+## 2026-07-23: Official fragment inpainting control 完成
+
+- `experiment_id`: `20260723-02-official-fragment-inpainting-control`.
+- 正式采样实现 commit: `52e114f6fcf48f2797c55279efd2391ea3b5a424`.
+- 共同评估实现 commit: `5484f985c4f9fa4d44e5318328058a2dd39899c4`.
+- 执行: 22 项测试、preflight、5/100 步 GPU smoke 和 5 case x 10 seed 正式采样均完成, 50/50 completed, 无 OOM、补抽或筛选.
+- 结果: Coordinate-only 为 native `14/50`、strict `13/50`; 官方 fragment inpainting 为 native `14/50`、strict `7/50`.
+- gate: 官方 strict 为 `NO-GO`. 官方方法可用于局部重设计, 但不能作为严格同分子坐标修复器的直接替代.
+- 主要限制: 官方组 14 个 native success 中有 7 个是不同分子; 7DDL 还暴露了生成区重新连接后固定边界芳香性可能改变的问题.
+- 报告: [20260723-02-official-fragment-inpainting-control-report.md](report/20260723-02-official-fragment-inpainting-control-report.md).
+- 输出: `outputs/20260723-02-official-fragment-inpainting-control/`.

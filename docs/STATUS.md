@@ -4,11 +4,12 @@
 
 ## 当前阶段
 
-- 首个 oracle-mask repair pilot 已完成, 冻结 gate 结论为 `CONDITIONAL`.
-- 当前计划: [20260723-02-official-fragment-inpainting-control-plan.md](plan/20260723-02-official-fragment-inpainting-control-plan.md).
+- Official fragment inpainting control 已完成, strict gate 结论为 `NO-GO`.
+- 最近计划: [20260723-02-official-fragment-inpainting-control-plan.md](plan/20260723-02-official-fragment-inpainting-control-plan.md).
 - 上位设计: [20260722-01-flowr-root-ligand-repair-v1-plan.md](plan/20260722-01-flowr-root-ligand-repair-v1-plan.md).
-- 当前工作: 在同一批人工 clash 输入和 seed 上执行 FLOWR.ROOT 官方 fragment inpainting, 与已冻结的 coordinate-only 结果做公平对照.
-- 对照同时报告局部重设计成功和严格同分子修复成功, 避免把生成的新分子误计为原分子的坐标修复.
+- 同一评估器下, coordinate-only 为 native `14/50`、strict `13/50`; 官方完整 inpainting 为 native `14/50`、strict `7/50`.
+- 官方方法能在部分案例生成有效的新局部结构, 但不能作为严格同分子坐标修复器的直接替代.
+- 实验报告: [20260723-02-official-fragment-inpainting-control-report.md](report/20260723-02-official-fragment-inpainting-control-report.md).
 
 ## 已确认边界
 
@@ -20,6 +21,6 @@
 
 ## 下一步
 
-1. 完成共同评估器和真值 fragment mask 适配器.
-2. 通过旧结果复现检查与 GPU smoke 后运行 50 次官方采样.
-3. 根据 native/strict 双终点判断官方方法适合作为局部重设计还是同分子修复基线.
+1. 保留两个已冻结实验作为后续 oracle-mask 对照, 不在原实验内调参.
+2. 新建独立 plan, 验证保持同一分子和局部共价几何的坐标表示、约束或采样方式.
+3. Oracle 修复达到 GO 标准后, 再进入 Fixed Mask Head 训练.

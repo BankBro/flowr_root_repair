@@ -1,0 +1,8 @@
+{
+  "audited_completed_sdfs": 50,
+  "boolean_mismatches_from_prewrite_evaluation": [],
+  "experiment_id": "20260723-02-official-fragment-inpainting-control",
+  "native_successes_after_artifact_evaluation": 14,
+  "status": "passed",
+  "strict_successes_after_artifact_evaluation": 7
+}
